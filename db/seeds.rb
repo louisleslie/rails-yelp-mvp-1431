@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Restaurant.destroy_all
+
+dishoom = {name: "Dishoom", address: "London", phone_number: "020 07736473", category: "french" }
+pizza = {name: "Pizza Express", address: "London", phone_number: "020 07736473", category: "italian"}
+
+[dishoom, pizza].each do |rest|
+  Restaurant.create!(rest)
+end
